@@ -89,7 +89,6 @@ gallery.insertAdjacentHTML(
 gallery.addEventListener("click", handleImageClick);
 
 function handleImageClick(event) {
-  const { target, currentTarget } = event;
   event.preventDefault();
   // console.log(target);
 

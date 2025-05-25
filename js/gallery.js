@@ -65,7 +65,7 @@ const images = [
 ];
 
 const gallery = document.querySelector("ul.gallery");
-console.log(gallery);
+// console.log(gallery);
 
 gallery.insertAdjacentHTML(
   "afterbegin",

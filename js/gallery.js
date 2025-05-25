@@ -66,6 +66,7 @@ const images = [
 
 const gallery = document.querySelector("ul.gallery");
 console.log(gallery);
+const {} = gallery;
 
 gallery.insertAdjacentHTML(
   "afterbegin",
@@ -87,17 +88,16 @@ gallery.insertAdjacentHTML(
 
 gallery.addEventListener("click", handleImageClick);
 
-function handleImageClick(event) {
+function handleImageClick({ target, currentTarget } = event) {
   event.preventDefault();
-  console.log(event.target);
+  // console.log(target);
 
-  // const instance = basicLightbox.create(event.target);
-  // instance.show();
-  basicLightbox
-    .create(
-      `
+  if (!(target === currentTarget))
+    basicLightbox
+      .create(
+        `
       <img class="modal-image" width="1112" height="640" src="${event.target.dataset.source}">
     `
-    )
-    .show();
+      )
+      .show();
 }

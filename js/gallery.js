@@ -96,7 +96,7 @@ function handleImageClick(event) {
   basicLightbox
     .create(
       `
-      <img class="modal-image" width="1112" height="640" src="${event.target.dataset.source}">
+      <img src="${event.target.dataset.source}">
     `
     )
     .show();

@@ -93,12 +93,12 @@ function handleImageClick(event) {
   event.preventDefault();
   // console.log(target);
 
-  if (!(target === currentTarget))
-    basicLightbox
-      .create(
-        `
+  if (event.target.nodeName !== "IMG") return;
+  basicLightbox
+    .create(
+      `
       <img class="modal-image" width="1112" height="640" src="${event.target.dataset.source}">
     `
-      )
-      .show();
+    )
+    .show();
 }
